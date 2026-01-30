@@ -7,7 +7,8 @@ This project provisions a production-style AWS EKS cluster using Terraform
 and deploys a containerized application exposed via AWS ALB Ingress.
 
 ## Architecture
-![EKS Architecture](docs/eks-architecture.png)
+
+<img width="1536" height="1024" alt="ChatGPT Image Jan 30, 2026, 03_34_01 PM" src="https://github.com/user-attachments/assets/3db2d420-ec1f-464b-9d45-562dccdc726d" />
 
 ## Tech Stack
 - AWS (EKS, VPC, ALB, IAM)
