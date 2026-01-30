@@ -16,9 +16,26 @@ variable "kubernetes_version" {
 }
 
 variable "node_role_arn" {
-  type = string
+  description = "IAM role ARN for EKS worker nodes"
+  type        = string
 }
 
-variable "subnet_ids" {
-  type = list(string)
+variable "node_desired_size" {
+  type    = number
+  default = 2
+}
+
+variable "node_min_size" {
+  type    = number
+  default = 1
+}
+
+variable "instance_types" {
+  type    = list(string)
+  default = ["t3.medium"]
+}
+
+variable "node_max_size" {
+  type    = number
+  default = 3
 }

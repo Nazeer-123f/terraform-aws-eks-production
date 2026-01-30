@@ -11,14 +11,14 @@ resource "aws_eks_node_group" "default" {
   }
 
   instance_types = ["t3.medium"]
-  capacity_type = "ON_DEMAND" 
-  ami_type = "AL2_x86_64"
+  capacity_type  = "ON_DEMAND"
+  ami_type       = "AL2_x86_64"
 
   tags = {
     Name = "${var.cluster_name}-node-group"
   }
-  
-  depends_on = [ 
+
+  depends_on = [
     aws_eks_cluster.this
-   ]
+  ]
 }

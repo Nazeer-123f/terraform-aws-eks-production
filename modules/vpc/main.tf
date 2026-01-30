@@ -26,7 +26,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "${var.project_name}-public-${count.index + 1}"
+    Name                     = "${var.project_name}-public-${count.index + 1}"
     "kubernetes.io/role/elb" = "1"
   }
 }
@@ -39,14 +39,14 @@ resource "aws_subnet" "private" {
   availability_zone = var.availability_zones[count.index]
 
   tags = {
-    Name = "${var.project_name}-private-${count.index + 1}"
+    Name                              = "${var.project_name}-private-${count.index + 1}"
     "kubernetes.io/role/internal-elb" = "1"
   }
 }
 
 # Elastic IP for NAT
 resource "aws_eip" "nat" {
-  count = length(var.public_subnets)
+  count  = length(var.public_subnets)
   domain = "vpc"
 }
 
