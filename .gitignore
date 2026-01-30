@@ -1,4 +1,4 @@
-/.terraform
+.terraform/
 *.tfstate
 *.tfstate.backup
 *.tfvars
@@ -14,3 +14,8 @@ crash.log.*
 .idea/
 *.swp
 *.swo
+# Logs
+crash.log
+
+# OS
+.DS_Store
